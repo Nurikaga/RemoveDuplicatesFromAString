@@ -1,0 +1,21 @@
+
+  // removeDup("hello")  -> "helo"
+  // removeDup("apple")  -> "aple"
+  // removeDup("aaaaaa") -> "a"
+  // removeDup("abc")    -> "abc"
+
+  public String removeDup(String str) {
+    String strNoDup = "";
+
+    // loop over string and get each char
+    for(char ch : str.toCharArray()) {
+      // if strNoDup does not contain char then add to it
+      if(!strNoDup.contains(String.valueOf(ch))) {
+        strNoDup += ch;
+      }
+    }
+
+    return strNoDup;
+  }
+
+  // Time Complexity: O(n^2) because contains() method of String has O(n)
